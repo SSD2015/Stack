@@ -20,6 +20,7 @@ public class StackFactory {
 		random = new java.util.Random( System.nanoTime() );
 		stackclasses = new ArrayList<Class<? extends Stack>>( );
 		register( ArrayStack.class );
+		register( DefinitivelyDefectiveStack.class );
 		register( LeakyStack.class );
 	}
 

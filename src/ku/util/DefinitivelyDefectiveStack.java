@@ -15,21 +15,26 @@ public class DefinitivelyDefectiveStack<T> implements Stack<T> {
 	 * A cons cell. What is a cons cell? you may ask!
 	 * See this: http://en.wikipedia.org/wiki/Cons
 	 * 
-	 * @param <T_T>
+	 * @param <E>
 	 */
-	private class Cons<T_T> {
-		public Cons(T_T car, Cons<T_T> cdr) {
+	private class Cons<E> {
+		public Cons(E car, Cons<E> cdr) {
 			super();
 			this.car = car;
 			this.cdr = cdr;
 		}
-		public      T_T  car;
-		public Cons<T_T> cdr;
+		public      E  car;
+		public Cons<E> cdr;
 	}
 
 	private int _size = 0;
 	private Cons<T> head = null;
 	private Cons<T> tail = null;
+	
+
+	public DefinitivelyDefectiveStack( int capacity ) {
+		//this.capacity = capacity;
+	}
 
 	@Override
 	public T pop() {
