@@ -13,3 +13,10 @@ Create JUnit tests for the Stack interface.
 ```
     Stack stack = StackFactory.makeStack( capacity );
 ```
+7. StackFactory produces 3 kinds of Stack. The default is type 0 (ArrayStack). To test a different stack type, add this code:
+```
+@Before
+public void before() {
+     StackFactory.setStackType( 1 );  // type = 0, 1, or 2
+}
+```
