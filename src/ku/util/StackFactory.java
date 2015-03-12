@@ -10,7 +10,9 @@ import java.util.List;
  *
  */
 public class StackFactory {
+	/** Known stack implementations. */
 	private static List<Class<? extends Stack>> stackclasses ;
+	/** index for selecting among known implementations. -1 means random selection. */
 	private static int stacktype = 0;
 	private static java.util.Random random;
 	
@@ -21,6 +23,7 @@ public class StackFactory {
 		register( LeakyStack.class );
 	}
 
+	/** Register a new type of Stack implementation. */
 	public static void register(Class<? extends Stack> stackClass) {
 		stackclasses.add( stackClass );
 	}
