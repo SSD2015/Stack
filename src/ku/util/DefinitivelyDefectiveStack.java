@@ -44,7 +44,7 @@ public class DefinitivelyDefectiveStack<T> implements Stack<T> {
 
 	@Override
 	public T peek() {
-		return head.car;
+		return tail.car;
 	}
 
 	@Override
